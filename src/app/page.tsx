@@ -1,9 +1,22 @@
 import Link from "next/link";
-
+import { Button } from "~/components/ui/button";
+import FAQ from "./_components/faq";
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      Hey. (starting to build the app)
+    <main className="flex min-h-screen flex-col items-center justify-center space-y-4">
+      <div className="text-box flex flex-col items-center gap-4 text-center">
+        <h1 className="text-6xl font-bold">My T3 App</h1>
+        <p className="text-lg font-light text-gray-500">
+          Get started right away.
+        </p>
+      </div>
+      <div className="button-box flex flex-row items-center justify-center gap-2 p-2">
+        <Button className="shadow-lg">Get Started</Button>
+        <Button variant={"secondary"} className="shadow-lg">
+          Learn More
+        </Button>
+      </div>
+      <FAQ />
     </main>
   );
 }

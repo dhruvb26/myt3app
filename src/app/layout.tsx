@@ -1,8 +1,14 @@
 import "~/styles/globals.css";
-
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "~/lib/utils";
 import { Inter } from "next/font/google";
+import Navbar from "./_components/Navbar";
 
 const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -20,7 +26,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <body
+        className={cn(
+          "bg-background min-h-screen font-sans antialiased",
+          fontSans.variable,
+        )}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
