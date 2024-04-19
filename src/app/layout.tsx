@@ -2,7 +2,7 @@ import "~/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Inter } from "next/font/google";
-import Navbar from "./_components/Navbar";
+import Navbar from "../components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],

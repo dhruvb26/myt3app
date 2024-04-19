@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import FAQ from "./_components/faq";
 export default function HomePage() {
