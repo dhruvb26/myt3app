@@ -2,7 +2,8 @@ import "~/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Inter } from "next/font/google";
-import Navbar from "../components/Navbar";
+import Navbar from "~/components/navbar";
+import { ThemeProvider } from "~/components/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,12 +29,19 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

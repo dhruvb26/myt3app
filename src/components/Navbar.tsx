@@ -10,13 +10,12 @@ import {
   NavigationMenuLink,
 } from "~/components/ui/navigation-menu";
 import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
-
+import { ModeToggle } from "./ui/mode-toggle";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerHeader,
-  DrawerFooter,
   DrawerDescription,
 } from "~/components/ui/drawer";
 
@@ -35,6 +34,9 @@ const Navbar = () => {
         </NavigationMenuItem>
         <NavigationMenuItem asChild>
           <Button variant={"ghost"}>Sign In</Button>
+        </NavigationMenuItem>
+        <NavigationMenuItem asChild>
+          <ModeToggle />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

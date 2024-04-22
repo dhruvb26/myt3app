@@ -1,6 +1,5 @@
 import { Button } from "~/components/ui/button";
 import FAQ from "./_components/faq";
-
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">

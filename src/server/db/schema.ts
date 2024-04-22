@@ -8,6 +8,8 @@ import {
   serial,
   timestamp,
   varchar,
+  pgTable,
+  text,
 } from "drizzle-orm/pg-core";
 
 /**
@@ -30,5 +32,11 @@ export const posts = createTable(
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
-  })
+  }),
 );
+
+export const users = createTable("user", {
+  id: serial("id").primaryKey(),
+  fullName: text("full_name"),
+  phone: varchar("phone", { length: 256 }),
+});
