@@ -2,7 +2,7 @@ import "~/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Inter } from "next/font/google";
-import Navbar from "~/components/navbar";
+import Navbar from "~/components/Navbar";
 import { ThemeProvider } from "~/components/theme-provider";
 
 const inter = Inter({
