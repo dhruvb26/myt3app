@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { cn } from "~/lib/utils";
+import { Avatar } from "./ui/avatar";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -18,6 +19,7 @@ import {
   DrawerHeader,
   DrawerDescription,
 } from "~/components/ui/drawer";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -32,8 +34,18 @@ const Navbar = () => {
         <NavigationMenuItem asChild>
           <Button variant={"link"}>Dashboard</Button>
         </NavigationMenuItem>
-        <NavigationMenuItem asChild>
-          <Button variant={"ghost"}>Sign In</Button>
+        <NavigationMenuItem>
+          <SignedOut>
+            <Button variant={"link"}>
+              <SignInButton />
+            </Button>
+          </SignedOut>
+
+          <SignedIn>
+            <Avatar>
+              <UserButton />
+            </Avatar>
+          </SignedIn>
         </NavigationMenuItem>
         <NavigationMenuItem asChild>
           <ModeToggle />
