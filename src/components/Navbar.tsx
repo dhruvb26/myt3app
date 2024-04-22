@@ -19,6 +19,7 @@ import {
   DrawerHeader,
   DrawerDescription,
 } from "~/components/ui/drawer";
+import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
@@ -29,10 +30,14 @@ const Navbar = () => {
     <NavigationMenu>
       <NavigationMenuList className="flex flex-col space-y-2 md:flex-row md:items-center md:space-x-2 md:space-y-0 md:bg-transparent">
         <NavigationMenuItem asChild>
-          <Button variant={"link"}>Home</Button>
+          <Button variant={"link"}>
+            <Link href="/">Home</Link>
+          </Button>
         </NavigationMenuItem>
         <NavigationMenuItem asChild>
-          <Button variant={"link"}>Dashboard</Button>
+          <Button variant={"link"}>
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <SignedOut>
@@ -40,7 +45,6 @@ const Navbar = () => {
               <SignInButton />
             </Button>
           </SignedOut>
-
           <SignedIn>
             <Avatar>
               <UserButton />

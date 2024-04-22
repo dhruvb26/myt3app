@@ -9,6 +9,5 @@ I am creating this application as a starter template for my upcoming projects. T
 - [x] Add a footer and make the Navbar collapsible
 - [x] Set up a database (w/ Supabase)
 - [x] Add authentication (w/ Clerk)
-- [ ] Error Management (w/ Sentry)
 
-Note: Posthog for analytics, Upstash for ratelimiting
+Optionals: Posthog/Plausible for analytics, Upstash for ratelimiting, Sentry for error management

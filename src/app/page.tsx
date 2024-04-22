@@ -18,11 +18,6 @@ export default function HomePage() {
         </div>
         <FAQ />
       </div>
-      <footer className="w-full bg-gray-200 p-4 text-center">
-        <p className="text-sm text-gray-600">
-          © 2024 My T3 App, Inc. All rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }
